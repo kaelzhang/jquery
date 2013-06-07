@@ -253,7 +253,8 @@ jQuery.fn = jQuery.prototype = {
 
 	ready: function( fn ) {
 		// Add the callback
-		jQuery.ready.promise().done( fn );
+		// jQuery.ready.promise().done( fn );
+		registerReady( fn );
 
 		return this;
 	},
@@ -414,8 +415,11 @@ jQuery.extend({
 			return;
 		}
 
-		// If there are functions bound, to execute
-		readyList.resolveWith( document, [ jQuery ] );
+		if(readyList){
+			readyList.forEach(function(fn) {
+			    fn.call(document, jQuery);
+			});
+		}
 
 		// Trigger any bound ready events
 		if ( jQuery.fn.trigger ) {
@@ -867,10 +871,13 @@ jQuery.extend({
 	}
 });
 
-jQuery.ready.promise = function( obj ) {
+
+// TODO:
+function registerReady( fn ) {
 	if ( !readyList ) {
 
-		readyList = jQuery.Deferred();
+		// readyList = jQuery.Deferred();
+		readyList = [];
 
 		// Catch cases where $(document).ready() is called after the browser event has already occurred.
 		// we once tried to use readyState "interactive" here, but it caused issues like the one
@@ -925,7 +932,8 @@ jQuery.ready.promise = function( obj ) {
 			}
 		}
 	}
-	return readyList.promise( obj );
+	// return readyList.promise( obj );
+	readyList.push( fn );
 };
 
 // Populate the class2type map
