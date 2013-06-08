@@ -209,9 +209,9 @@ jQuery.fn = jQuery.prototype = {
 	length: 0,
 
 	// The number of elements contained in the matched element set
-	size: function() {
-		return this.length;
-	},
+	// size: function() {
+	// 	return this.length;
+	// },
 
 	toArray: function() {
 		return core_slice.call( this );
