@@ -11,14 +11,14 @@ var
 
 	// Use the correct document accordingly with window argument (sandbox)
 	// location = window.location,
-	document = window.document,
+	// document = window.document,
 	docElem = document.documentElement,
 
 	// Map over jQuery in case of overwrite
-	_jQuery = window.jQuery,
+	// _jQuery = window.jQuery,
 
 	// Map over the $ in case of overwrite
-	_$ = window.$,
+	// _$ = window.$,
 
 	// [[Class]] -> type pairs
 	class2type = {},
@@ -366,17 +366,17 @@ jQuery.extend({
 	// Non-digits removed to match rinlinejQuery
 	expando: "jQuery" + ( core_version + Math.random() ).replace( /\D/g, "" ),
 
-	noConflict: function( deep ) {
-		if ( window.$ === jQuery ) {
-			window.$ = _$;
-		}
+	// noConflict: function( deep ) {
+	// 	if ( window.$ === jQuery ) {
+	// 		window.$ = _$;
+	// 	}
 
-		if ( deep && window.jQuery === jQuery ) {
-			window.jQuery = _jQuery;
-		}
+	// 	if ( deep && window.jQuery === jQuery ) {
+	// 		window.jQuery = _jQuery;
+	// 	}
 
-		return jQuery;
-	},
+	// 	return jQuery;
+	// },
 
 	// Is the DOM ready to be used? Set to true once it occurs.
 	isReady: false,
