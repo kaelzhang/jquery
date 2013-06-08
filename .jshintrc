@@ -10,5 +10,10 @@
 	"strict": true,
 	"trailing": true,
 
-	"node": true
+	"node": true,
+	"globals": {
+		"module": true,
+		"exports": true,
+		"require": true
+	}
 }
