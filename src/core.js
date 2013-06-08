@@ -10,7 +10,7 @@ var
 	core_strundefined = typeof undefined,
 
 	// Use the correct document accordingly with window argument (sandbox)
-	location = window.location,
+	// location = window.location,
 	document = window.document,
 	docElem = document.documentElement,
 
@@ -417,7 +417,7 @@ jQuery.extend({
 
 		if(readyList){
 			readyList.forEach(function(fn) {
-			    fn.call(document, jQuery);
+				fn.call(document, jQuery);
 			});
 		}
 

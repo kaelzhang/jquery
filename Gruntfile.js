@@ -37,7 +37,7 @@ module.exports = function( grunt ) {
 		},
 		build: {
 			all:{
-				dest: "dist/jquery.js",
+				dest: "lib/jquery.js",
 				src: [
 					"src/intro.js",
 					"src/core.js",
@@ -63,7 +63,7 @@ module.exports = function( grunt ) {
 					{ flag: "dimensions", src: "src/dimensions.js", needs: ["css"] },
 					// { flag: "deprecated", src: "src/deprecated.js" },
 
-					"src/exports.js",
+					// "src/exports.js",
 					"src/outro.js"
 				]
 			}
@@ -71,7 +71,7 @@ module.exports = function( grunt ) {
 
 		jshint: {
 			dist: {
-				src: [ "dist/jquery.js" ],
+				src: [ "lib/jquery.js" ],
 				options: {
 					jshintrc: "src/.jshintrc"
 				}
@@ -104,7 +104,7 @@ module.exports = function( grunt ) {
 		uglify: {
 			all: {
 				files: {
-					"dist/jquery.min.js": [ "dist/jquery.js" ]
+					"lib/jquery.min.js": [ "lib/jquery.js" ]
 				},
 				options: {
 					banner: "/*! jQuery v<%= pkg.version %> | (c) 2005, 2013 jQuery Foundation, Inc. | jquery.org/license */",
