@@ -1,5 +1,5 @@
 // Expose jQuery to the global object
-window.jQuery = window.$ = jQuery;
+// window.jQuery = window.$ = jQuery;
 
 // Expose jQuery as an AMD module, but only for AMD loaders that
 // understand the issues with loading multiple versions of jQuery
@@ -13,6 +13,8 @@ window.jQuery = window.$ = jQuery;
 // file names, and jQuery is normally delivered in a lowercase file name.
 // Do this after creating the global so that if an AMD module wants to call
 // noConflict to hide this version of jQuery, it will work.
-if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
-	define( "jquery", [], function () { return jQuery; } );
-}
+// if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
+// 	define( "jquery", [], function () { return jQuery; } );
+// }
+
+module.exports = jQuery;
