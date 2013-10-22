@@ -34,5 +34,13 @@
 		"testswarm": "0.2.2"
 	},
 	"keywords": [],
-	"main": "lib/jquery.js"
+	"main": "lib/jquery.js",
+    "cortex": {
+        "ignore": [
+            "speed",
+            "src",
+            "test",
+            "build"
+        ]
+    }
 }
