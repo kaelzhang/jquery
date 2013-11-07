@@ -506,8 +506,10 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks("grunt-contrib-uglify");
 
 	// Default grunt
-	grunt.registerTask( "default", [ "update_submodules", "selector", "build:*:*", "jshint", "uglify", "dist:*", "compare_size" ] );
+	grunt.registerTask( "release", [ "update_submodules", "selector", "build:*:*", /* "jshint", */ "uglify", "dist:*", "compare_size" ] );
+
+    grunt.registerTask( "default", [ "update_submodules", "selector", "build:*:*", /* "jshint", "uglify", "dist:*", "compare_size" */ ] );
 
 	// Short list as a high frequency watch task
-	grunt.registerTask( "dev", [ "selector", "build:*:*", "jshint" ] );
+	grunt.registerTask( "dev", [ "selector", "build:*:*" , "jshint" ] );
 };
