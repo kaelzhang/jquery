@@ -1,6 +1,31 @@
 [jQuery](http://jquery.com/) - New Wave JavaScript
 ==================================================
 
+## Attensions
+
+This version of jQuery only contains a few modules of the original jQuery.
+
+### Includes
+
+- dom and selector engine
+	- data
+	- attributes
+	- events
+	- traversing
+	- manipulation
+	- offset
+	- dimension
+	
+### Excludes
+
+- callbacks and deffered
+- form serialize: `.serialize()`
+- event alias, such as `.click()` and so on. Please use `.on('click', cb)`
+- ajax and jsonp
+- effects and animation
+- and all APIs that jQuery marks as deprecated.
+
+
 Contribution Guides
 --------------------------------------
 
