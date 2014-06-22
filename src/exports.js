@@ -16,3 +16,7 @@ window.jQuery = window.$ = jQuery;
 if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
 	define( "jquery", [], function () { return jQuery; } );
 }
+
+if( typeof module !== "undefined" && module.exports) {
+	module.exports = jQuery;
+}
